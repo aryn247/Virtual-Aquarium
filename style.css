@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: #87CEEB;
+}
+
+#aquarium {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+  overflow: hidden;
+}
+
+/* Fish Styling */
+.fish {
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: left 3s linear, top 3s linear;
+}
+
+/* Bubbles */
+.bubble {
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  animation: bubble-rise 4s infinite linear;
+}
+
+/* Food */
+.food {
+  width: 10px;
+  height: 10px;
+  background-color: yellow;
+  position: absolute;
+  border-radius: 50%;
+  transition: top 2s ease-in;
+}
+
+/* Decorations */
+.decor {
+  width: 100px;
+  height: 80px;
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Night Mode */
+.night-mode {
+  background-color: #001f3f !important;
+}
+
+/* Bubble Animation */
+@keyframes bubble-rise {
+  0% { bottom: 0; opacity: 1; }
+  100% { bottom: 100vh; opacity: 0; }
+}
